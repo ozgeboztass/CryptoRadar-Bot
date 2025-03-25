@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "coingecko-api": "^1.0.10",
+    "dotenv": "^16.4.7"
+  }
+}
