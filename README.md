@@ -133,19 +133,6 @@ python bot.py
 | UNI | Uniswap |
 | AVAX | Avalanche |
 
-## 🤝 Contributing
-
-1. Fork this repository
-2. Create a new branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'feat: add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Create a Pull Request
-
-## 📞 Contact
-
-For questions or suggestions:
-- Create an issue on GitHub
-- Join our [Telegram Group](https://t.me/your_support_group)
 
 ## 📄 License
 
