@@ -1,161 +1,155 @@
-Cryptocurrency Telegram Bot
-This bot is a Python application that allows users to query cryptocurrency prices and track their portfolios via Telegram.
+# 🚀 Kripto Para Telegram Botu
 
-Features
-Price Query
-Show the current price of a specified cryptocurrency using the /price [crypto_code] command (e.g., /price btc)
+Gelişmiş kripto para takibi ve portföy yönetimi sağlayan Telegram botu.
 
-Query multiple cryptocurrencies at once (e.g., /price btc eth)
+## 📋 İçindekiler
+- [Özellikler](#özellikler)
+- [Gereksinimler](#gereksinimler)
+- [Kurulum](#kurulum)
+- [Kullanım](#kullanım)
+- [Desteklenen Kripto Paralar](#desteklenen-kripto-paralar)
+- [Katkıda Bulunma](#katkıda-bulunma)
+- [İletişim](#iletişim)
 
-List the top 10 cryptocurrencies using the /top command
+## ✨ Özellikler
 
-Show a list of popular cryptocurrencies using the /list command
+### 💹 Fiyat Sorgulama
+- `/price [kripto_kodu]` ile anlık fiyat görüntüleme
+  ```
+  Örnek: /price btc
+  ```
+- Çoklu kripto para sorgulama
+  ```
+  Örnek: /price btc eth sol
+  ```
+- `/top` komutu ile en büyük 10 kripto parayı listeleme
+- `/list` komutu ile popüler kripto paraları görüntüleme
 
-Managing Favorite Cryptocurrencies
-Add cryptocurrencies to favorites using the /add [crypto_code] command (e.g., /add sol)
+### ⭐ Favori Yönetimi
+- `/add [kripto_kodu]` ile favorilere ekleme
+- `/favorites` ile favori listesini görüntüleme
+- `/remove [kripto_kodu]` ile favorilerden çıkarma
 
-View your favorite cryptocurrencies with the /favorites command
+### 📊 Portföy Takibi
+- `/portfolio` ile portföy görüntüleme
+- `/add_transaction` ile işlem ekleme
+  ```
+  Format: /add_transaction [kripto_kodu] [alım/satım] [miktar] [fiyat] [tarih] [komisyon]
+  Örnek: /add_transaction btc buy 0.05 35000 2023-11-20 10
+  ```
+- `/performance` ile kar/zarar analizi
+- `/list_transactions` ile işlem geçmişi
+- `/delete_transaction` ile işlem silme
 
-Remove a cryptocurrency from favorites using the /remove [crypto_code] command (e.g., /remove sol)
+## 🛠️ Gereksinimler
 
-Portfolio Tracking
-View your portfolio using the /portfolio command
+- Python 3.7+
+- python-telegram-bot
+- pycoingecko
+- python-dotenv
+- requests
 
-Add a transaction to your portfolio using the /add_transaction [crypto_code] [transaction_type] [amount] [price] [date] [fee] command
+## ⚙️ Kurulum
 
-View portfolio performance and profit/loss with the /performance command
-
-List all transactions using the /list_transactions command
-
-Delete a specific transaction with the /delete_transaction [crypto_code] [transaction_id] command
-
-Technical Requirements
-Python 3.7+
-
-python-telegram-bot library
-
-CoinGecko API for cryptocurrency data
-
-Planning
-Project Structure Setup
-
-Create necessary directories and files
-
-Set up requirements.txt
-
-Bot Core Setup
-
-Connect to Telegram API
-
-Define command handlers
-
-CoinGecko API Integration
-
-Fetch cryptocurrency data
-
-Process and present the data
-
-Implement Commands
-
-Implement /price command
-
-Implement /top command
-
-Implement /add, /remove, and /favorites commands
-
-Implement portfolio tracking commands
-
-Error handling
-
-Testing and Debugging
-
-Test different scenarios
-
-Debug and fix issues
-
-Installation
-Clone the repository:
-
-bash
-Kopyala
-Düzenle
+1. Repoyu klonlayın:
+```bash
 git clone https://github.com/username/telegrambot.git
 cd telegrambot
-Create a virtual environment and install dependencies:
+```
 
-bash
-Kopyala
-Düzenle
-python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
+2. Sanal ortam oluşturun:
+```bash
+python -m venv .venv
+# Linux/macOS:
+source .venv/bin/activate
+# Windows:
+.venv\Scripts\activate
+```
+
+3. Gereksinimleri yükleyin:
+```bash
 pip install -r requirements.txt
-Create a .env file and add your Telegram Bot Token:
+```
 
-ini
-Kopyala
-Düzenle
+4. `.env` dosyası oluşturun:
+```ini
 TELEGRAM_BOT_TOKEN=your_telegram_bot_token
-Run the bot:
+```
 
-nginx
-Kopyala
-Düzenle
+5. Botu çalıştırın:
+```bash
 python bot.py
-How to Use the Bot
-Basic Commands
-/start - Starts the bot and provides usage information
+```
 
-/help - Displays help information about commands
+## 📱 Kullanım
 
-Price Commands
-/price btc - Shows the current price of Bitcoin
+### 🔰 Temel Komutlar
+| Komut | Açıklama |
+|-------|-----------|
+| `/start` | Botu başlatır ve kullanım bilgilerini gösterir |
+| `/help` | Tüm komutların detaylı açıklamalarını gösterir |
 
-/price btc eth - Shows prices for the specified cryptocurrencies
+### 💰 Fiyat Komutları
+| Komut | Açıklama |
+|-------|-----------|
+| `/price btc` | Bitcoin fiyatını gösterir |
+| `/price btc eth` | Belirtilen kripto paraların fiyatlarını gösterir |
+| `/top` | En büyük 10 kripto parayı listeler |
+| `/list` | Popüler kripto paraları listeler |
 
-/top - Lists the top 10 cryptocurrencies
+### ⭐ Favori Komutları
+| Komut | Açıklama |
+|-------|-----------|
+| `/add sol` | Solana'yı favorilere ekler |
+| `/favorites` | Favori kripto paraları listeler |
+| `/remove sol` | Solana'yı favorilerden kaldırır |
 
-/list - Displays a list of popular cryptocurrencies
+### 📈 Portföy Komutları
+| Komut | Açıklama |
+|-------|-----------|
+| `/portfolio` | Portföy durumunu gösterir |
+| `/add_transaction` | Yeni işlem ekler |
+| `/performance` | Portföy performansını gösterir |
+| `/list_transactions` | Tüm işlemleri listeler |
+| `/delete_transaction` | İşlem siler |
 
-Favorite Commands
-/add sol - Adds Solana to favorites
+## 🪙 Desteklenen Kripto Paralar
 
-/favorites - Lists your favorite cryptocurrencies
+| Kısaltma | Kripto Para |
+|----------|-------------|
+| BTC | Bitcoin |
+| ETH | Ethereum |
+| SOL | Solana |
+| DOGE | Dogecoin |
+| XRP | Ripple |
+| ADA | Cardano |
+| DOT | Polkadot |
+| LTC | Litecoin |
+| BNB | Binance Coin |
+| USDT | Tether |
+| USDC | USD Coin |
+| MATIC | Polygon |
+| LINK | Chainlink |
+| UNI | Uniswap |
+| AVAX | Avalanche |
 
-/remove sol - Removes Solana from favorites
+## 🤝 Katkıda Bulunma
 
-Portfolio Commands
-/portfolio - Displays your portfolio
+1. Bu repoyu forklayın
+2. Yeni bir branch oluşturun (`git checkout -b feature/amazing-feature`)
+3. Değişikliklerinizi commit edin (`git commit -m 'feat: add amazing feature'`)
+4. Branch'inizi push edin (`git push origin feature/amazing-feature`)
+5. Pull Request oluşturun
 
-/add_transaction btc buy 0.05 35000 2023-11-20 10 - Adds a Bitcoin purchase transaction
+## 📞 İletişim
 
-Format: /add_transaction [crypto_code] [buy/sell] [amount] [price] [date] [fee]
+Sorularınız veya önerileriniz için:
+- GitHub Issues üzerinden bildirim oluşturabilirsiniz
+- [Telegram Grubumuza](https://t.me/your_support_group) katılabilirsiniz
 
-Date and fee are optional
+## 📄 Lisans
 
-/performance - Shows portfolio performance and profit/loss
+Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICENSE) dosyasına bakınız.
 
-/list_transactions - Lists all transactions
-
-/delete_transaction btc 1 - Deletes transaction #1 for Bitcoin
-
-Supported Cryptocurrencies
-The bot recognizes the following common cryptocurrency abbreviations:
-
-btc - Bitcoin
-
-eth - Ethereum
-
-sol - Solana
-
-doge - Dogecoin
-
-xrp - Ripple
-
-ada - Cardano
-
-dot - Polkadot
-
-ltc - Litecoin
-
-Contact
-If you have any questions or suggestions, please open an issue on GitHub.
+---
+⭐ Bu projeyi beğendiyseniz yıldız vermeyi unutmayın!
