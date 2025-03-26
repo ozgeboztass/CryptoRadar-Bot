@@ -140,3 +140,18 @@ This project is licensed under the MIT License. See [LICENSE](LICENSE) file for 
 
 ---
 ⭐ Don't forget to star this project if you found it useful!
+
+style: format code according to PEP 8
+style: improve code readability
+style: standardize function names
+style: clean up whitespace
+
+chore: update dependencies
+chore: configure GitHub Actions
+chore: update .gitignore
+chore: add environment variables
+
+refactor: improve error handling
+refactor: optimize price fetching
+refactor: restructure portfolio calculations
+refactor: enhance data validation
