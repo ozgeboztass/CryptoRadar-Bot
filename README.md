@@ -1,47 +1,47 @@
-# 🚀 Kripto Para Telegram Botu
+# 🚀 Cryptocurrency Telegram Bot
 
-Gelişmiş kripto para takibi ve portföy yönetimi sağlayan Telegram botu.
+Advanced cryptocurrency tracking and portfolio management Telegram bot.
 
-## 📋 İçindekiler
-- [Özellikler](#özellikler)
-- [Gereksinimler](#gereksinimler)
-- [Kurulum](#kurulum)
-- [Kullanım](#kullanım)
-- [Desteklenen Kripto Paralar](#desteklenen-kripto-paralar)
-- [Katkıda Bulunma](#katkıda-bulunma)
-- [İletişim](#iletişim)
+## 📋 Table of Contents
+- [Features](#features)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Supported Cryptocurrencies](#supported-cryptocurrencies)
+- [Contributing](#contributing)
+- [Contact](#contact)
 
-## ✨ Özellikler
+## ✨ Features
 
-### 💹 Fiyat Sorgulama
-- `/price [kripto_kodu]` ile anlık fiyat görüntüleme
+### 💹 Price Queries
+- View real-time prices with `/price [crypto_code]`
   ```
-  Örnek: /price btc
+  Example: /price btc
   ```
-- Çoklu kripto para sorgulama
+- Multiple cryptocurrency queries
   ```
-  Örnek: /price btc eth sol
+  Example: /price btc eth sol
   ```
-- `/top` komutu ile en büyük 10 kripto parayı listeleme
-- `/list` komutu ile popüler kripto paraları görüntüleme
+- List top 10 cryptocurrencies with `/top` command
+- View popular cryptocurrencies with `/list` command
 
-### ⭐ Favori Yönetimi
-- `/add [kripto_kodu]` ile favorilere ekleme
-- `/favorites` ile favori listesini görüntüleme
-- `/remove [kripto_kodu]` ile favorilerden çıkarma
+### ⭐ Favorites Management
+- Add to favorites with `/add [crypto_code]`
+- View favorite list with `/favorites`
+- Remove from favorites with `/remove [crypto_code]`
 
-### 📊 Portföy Takibi
-- `/portfolio` ile portföy görüntüleme
-- `/add_transaction` ile işlem ekleme
+### 📊 Portfolio Tracking
+- View portfolio with `/portfolio`
+- Add transactions with `/add_transaction`
   ```
-  Format: /add_transaction [kripto_kodu] [alım/satım] [miktar] [fiyat] [tarih] [komisyon]
-  Örnek: /add_transaction btc buy 0.05 35000 2023-11-20 10
+  Format: /add_transaction [crypto_code] [buy/sell] [amount] [price] [date] [fee]
+  Example: /add_transaction btc buy 0.05 35000 2023-11-20 10
   ```
-- `/performance` ile kar/zarar analizi
-- `/list_transactions` ile işlem geçmişi
-- `/delete_transaction` ile işlem silme
+- Profit/loss analysis with `/performance`
+- Transaction history with `/list_transactions`
+- Delete transactions with `/delete_transaction`
 
-## 🛠️ Gereksinimler
+## 🛠️ Requirements
 
 - Python 3.7+
 - python-telegram-bot
@@ -49,15 +49,15 @@ Gelişmiş kripto para takibi ve portföy yönetimi sağlayan Telegram botu.
 - python-dotenv
 - requests
 
-## ⚙️ Kurulum
+## ⚙️ Installation
 
-1. Repoyu klonlayın:
+1. Clone the repository:
 ```bash
 git clone https://github.com/username/telegrambot.git
 cd telegrambot
 ```
 
-2. Sanal ortam oluşturun:
+2. Create virtual environment:
 ```bash
 python -m venv .venv
 # Linux/macOS:
@@ -66,57 +66,57 @@ source .venv/bin/activate
 .venv\Scripts\activate
 ```
 
-3. Gereksinimleri yükleyin:
+3. Install requirements:
 ```bash
 pip install -r requirements.txt
 ```
 
-4. `.env` dosyası oluşturun:
+4. Create `.env` file:
 ```ini
 TELEGRAM_BOT_TOKEN=your_telegram_bot_token
 ```
 
-5. Botu çalıştırın:
+5. Run the bot:
 ```bash
 python bot.py
 ```
 
-## 📱 Kullanım
+## 📱 Usage
 
-### 🔰 Temel Komutlar
-| Komut | Açıklama |
-|-------|-----------|
-| `/start` | Botu başlatır ve kullanım bilgilerini gösterir |
-| `/help` | Tüm komutların detaylı açıklamalarını gösterir |
+### 🔰 Basic Commands
+| Command | Description |
+|---------|-------------|
+| `/start` | Starts the bot and shows usage information |
+| `/help` | Shows detailed description of all commands |
 
-### 💰 Fiyat Komutları
-| Komut | Açıklama |
-|-------|-----------|
-| `/price btc` | Bitcoin fiyatını gösterir |
-| `/price btc eth` | Belirtilen kripto paraların fiyatlarını gösterir |
-| `/top` | En büyük 10 kripto parayı listeler |
-| `/list` | Popüler kripto paraları listeler |
+### 💰 Price Commands
+| Command | Description |
+|---------|-------------|
+| `/price btc` | Shows Bitcoin price |
+| `/price btc eth` | Shows prices for specified cryptocurrencies |
+| `/top` | Lists top 10 cryptocurrencies |
+| `/list` | Lists popular cryptocurrencies |
 
-### ⭐ Favori Komutları
-| Komut | Açıklama |
-|-------|-----------|
-| `/add sol` | Solana'yı favorilere ekler |
-| `/favorites` | Favori kripto paraları listeler |
-| `/remove sol` | Solana'yı favorilerden kaldırır |
+### ⭐ Favorite Commands
+| Command | Description |
+|---------|-------------|
+| `/add sol` | Adds Solana to favorites |
+| `/favorites` | Lists favorite cryptocurrencies |
+| `/remove sol` | Removes Solana from favorites |
 
-### 📈 Portföy Komutları
-| Komut | Açıklama |
-|-------|-----------|
-| `/portfolio` | Portföy durumunu gösterir |
-| `/add_transaction` | Yeni işlem ekler |
-| `/performance` | Portföy performansını gösterir |
-| `/list_transactions` | Tüm işlemleri listeler |
-| `/delete_transaction` | İşlem siler |
+### 📈 Portfolio Commands
+| Command | Description |
+|---------|-------------|
+| `/portfolio` | Shows portfolio status |
+| `/add_transaction` | Adds new transaction |
+| `/performance` | Shows portfolio performance |
+| `/list_transactions` | Lists all transactions |
+| `/delete_transaction` | Deletes transaction |
 
-## 🪙 Desteklenen Kripto Paralar
+## 🪙 Supported Cryptocurrencies
 
-| Kısaltma | Kripto Para |
-|----------|-------------|
+| Symbol | Cryptocurrency |
+|--------|---------------|
 | BTC | Bitcoin |
 | ETH | Ethereum |
 | SOL | Solana |
@@ -133,23 +133,23 @@ python bot.py
 | UNI | Uniswap |
 | AVAX | Avalanche |
 
-## 🤝 Katkıda Bulunma
+## 🤝 Contributing
 
-1. Bu repoyu forklayın
-2. Yeni bir branch oluşturun (`git checkout -b feature/amazing-feature`)
-3. Değişikliklerinizi commit edin (`git commit -m 'feat: add amazing feature'`)
-4. Branch'inizi push edin (`git push origin feature/amazing-feature`)
-5. Pull Request oluşturun
+1. Fork this repository
+2. Create a new branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'feat: add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Create a Pull Request
 
-## 📞 İletişim
+## 📞 Contact
 
-Sorularınız veya önerileriniz için:
-- GitHub Issues üzerinden bildirim oluşturabilirsiniz
-- [Telegram Grubumuza](https://t.me/your_support_group) katılabilirsiniz
+For questions or suggestions:
+- Create an issue on GitHub
+- Join our [Telegram Group](https://t.me/your_support_group)
 
-## 📄 Lisans
+## 📄 License
 
-Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICENSE) dosyasına bakınız.
+This project is licensed under the MIT License. See [LICENSE](LICENSE) file for details.
 
 ---
-⭐ Bu projeyi beğendiyseniz yıldız vermeyi unutmayın!
+⭐ Don't forget to star this project if you found it useful!
